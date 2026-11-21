@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light;
+  color: #1d2e39;
+  background: #fff;
+  font-family: "Inter", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", system-ui, sans-serif;
+  line-height: 1.8;
+  --teal: #03625f;
+  --line: #d8e2e3;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+a { color: var(--teal); text-underline-offset: .22em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; border-radius: 2px; }
+.skip { position: absolute; left: 1rem; top: -8rem; padding: .5rem 1rem; background: white; z-index: 1; }
+.skip:focus { top: .5rem; }
+header { border-bottom: 1px solid var(--line); }
+.bar, .foot { width: min(100% - 3rem, 62rem); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.bar { min-height: 5rem; }
+.brand, .foot span { font-weight: 660; letter-spacing: -.025em; }
+.brand { font-size: 1.25rem; text-decoration: none; color: #143d3c; }
+nav, .links { display: flex; gap: 1.35rem; flex-wrap: wrap; }
+nav a { font-size: .95rem; color: #41545a; text-decoration: none; }
+nav a[aria-current="page"] { font-weight: 650; color: var(--teal); text-decoration: underline; text-underline-offset: .4em; }
+main { width: min(100% - 3rem, 43rem); margin: clamp(2.75rem, 8vw, 5rem) auto; flex: 1; }
+h1, h2 { color: #142d35; }
+h1 { font-size: clamp(1.95rem, 4.5vw, 3.15rem); line-height: 1.28; margin: 0; letter-spacing: -.035em; text-wrap: balance; }
+.intro { margin: 1.25rem 0 2.5rem; line-height: 1.8; font-size: 1.1rem; color: #405860; }
+section { border-top: 1px solid var(--line); padding-block: 1.45rem; scroll-margin-top: 1rem; }
+h2 { margin: 0 0 .55rem; font-size: 1.25rem; line-height: 1.5; }
+p, ol, .links { margin: .55rem 0 0; }
+code { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .95em; color: #074b4b; background: #edf4f3; padding: .05em .28em; border-radius: 3px; }
+ol { padding-inline-start: 1.45rem; }
+li { padding-inline-start: .2rem; margin-block: .5rem; }
+footer { background: #f2f6f5; border-top: 1px solid var(--line); }
+.foot { min-height: 4.5rem; color: #42585c; font-size: .9rem; }
+@media (max-width: 38rem) {
+  .bar, .foot, main { width: calc(100% - 2.25rem); }
+  .bar { flex-direction: column; align-items: flex-start; padding-block: 1rem .8rem; gap: .4rem; }
+  nav { gap: 1.1rem; }
+  .intro { margin-bottom: 1.75rem; }
+}

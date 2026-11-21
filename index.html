@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="google-site-verification" content="-mMHKc6F9_WfC_9PoqFAPK4hkTQcwh5IUlnir4keCIY">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="了解 Zotero Mac mini Sync 如何使用 rclone、WebDAV 和有限的 Google Drive 权限同步个人文献附件。">
+  <meta name="referrer" content="no-referrer">
+  <title>将 Zotero 附件同步到自己的云盘 · Zotero Mac mini Sync</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳至正文</a>
+  <header>
+    <div class="bar">
+      <a class="brand" href="index.html" lang="en">Zotero Mac mini Sync</a>
+      <nav aria-label="主导航"><a href="index.html" aria-current="page">应用说明</a><a href="privacy.html">隐私政策</a><a href="terms.html">使用条款</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <h1>将 Zotero 附件同步到自己的云盘</h1>
+    <p class="intro">Zotero Mac mini Sync 是一个独立维护、供维护者本人使用的桌面应用。在 Mac mini 的 Zotero 文库中添加附件后，rclone 会把它同步到维护者自己的 Google 云端硬盘。</p>
+    <section>
+      <h2>一个附件如何同步</h2>
+      <p>Zotero 将附件打包成 ZIP，并生成记录修改时间与校验值的同步标记。它通过本机 WebDAV 服务把这两种文件交给 rclone，再由 rclone 写入已授权云盘的专用文件夹。需要取回附件时，同一条连接也支持下载。</p>
+    </section>
+    <section>
+      <h2>Google 授权的范围</h2>
+      <p>应用仅申请 Google Drive 的 <code>drive.file</code> 权限，用于创建和管理应用同步的附件及标记。授权在 Google 的页面完成，凭据保存在 Mac mini 上，用于之后的自动同步。</p>
+      <p><a href="privacy.html">查看数据使用与撤回授权说明</a></p>
+    </section>
+    <section>
+      <h2>使用和支持</h2>
+      <p>本网站提供应用说明。同步设置由维护者在自己的 Mac mini 上管理。如需了解使用条件或联系维护者，可查阅以下页面。</p>
+      <div class="links"><a href="terms.html">阅读使用条款</a><a href="privacy.html#contact">查看联系方式</a></div>
+    </section>
+  </main>
+  <footer><div class="foot"><span lang="en">Zotero Mac mini Sync</span><a href="privacy.html#contact">联系维护者</a></div></footer>
+</body>
+</html>

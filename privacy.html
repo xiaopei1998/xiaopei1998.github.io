@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zotero Mac mini Sync 的隐私政策、权限、数据用途与存放位置，以及撤回授权和删除数据的方式。">
+  <meta name="referrer" content="no-referrer">
+  <title>隐私政策 · Zotero Mac mini Sync</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳至正文</a>
+  <header>
+    <div class="bar">
+      <a class="brand" href="index.html" lang="en">Zotero Mac mini Sync</a>
+      <nav aria-label="主导航"><a href="index.html">应用说明</a><a href="privacy.html" aria-current="page">隐私政策</a><a href="terms.html">使用条款</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <h1>隐私政策</h1>
+    <p class="intro">本政策说明 Zotero Mac mini Sync 如何处理 Zotero 附件、Google Drive 数据和授权凭据。</p>
+    <section>
+      <h2>访问哪些数据</h2>
+      <p>应用读取或写入所同步附件的 ZIP 压缩包、对应的同步标记，以及完成传输所需的文件标识、大小、修改时间和校验值。配置或迁移时，应用可读取已授权云盘的账号标识，以核对附件的存放账号。</p>
+      <p>Google 的 <code>drive.file</code> 权限适用于应用创建的文件，或用户明确向应用开放的文件。本应用将同步操作限定在该账号的 Zotero 附件专用文件夹中。<a href="https://developers.google.com/workspace/drive/api/guides/api-specific-auth">Google Drive 权限说明</a></p>
+    </section>
+    <section>
+      <h2>用途、存放位置与接收方</h2>
+      <p>上述数据用于传输附件、识别改动和校验文件完整性。原件保存在本机 Zotero 文库，同步副本存放在维护者自己的 Google 云端硬盘。传输由本机的 rclone 通过 Google Drive API 完成。Google 是这一传输的接收方。</p>
+      <p>OAuth 客户端凭据和登录授权令牌保存在 Mac mini 的私有配置中。公开说明页只展示静态文本。应用对 Google 用户数据的使用仅限于上述同步功能。<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 服务用户数据政策</a></p>
+    </section>
+    <section>
+      <h2>撤回授权与删除数据</h2>
+      <ol>
+        <li>要停止本机传输，可在 Zotero 中关闭个人文库的 WebDAV 附件同步。</li>
+        <li>要撤回云盘访问权限，在 Google 账号的第三方连接中选择 <strong>Zotero Mac mini Sync</strong> 并移除访问权限。<a href="https://myaccount.google.com/connections">管理 Google 账号的第三方连接</a></li>
+        <li>撤回授权后，已同步的云盘文件和本机文库副本仍由账号持有人保管。要移除云盘副本，可在停止同步后，在 Google 云端硬盘中将相应文件移至回收站。要移除本地数据，可另行删除 Zotero 中的附件及本机保存的同步缓存或凭据。</li>
+      </ol>
+    </section>
+    <section id="contact">
+      <h2>联系维护者</h2>
+      <p>如对权限、数据处理或删除方式有疑问，请使用 Google 授权页面上为 Zotero Mac mini Sync 列出的支持邮箱联系维护者。</p>
+    </section>
+  </main>
+  <footer><div class="foot"><span lang="en">Zotero Mac mini Sync</span><a href="privacy.html#contact">联系维护者</a></div></footer>
+</body>
+</html>
